@@ -1,10 +1,12 @@
 package student;
 
+import java.util.ArrayList;
+
 public class Group {
 	
 	private String groupName;
 	private int course;
-	private Student []student;//как добавлять ученика в группе??????????????
+	private ArrayList<Student> student;
 	private Teacher teacher;
 	
 	public Group (String groupName, int course, Student student, Teacher teacher) {
@@ -37,8 +39,8 @@ public class Group {
 		return this.teacher;
 	}
 	
-	public void addStudent (Student student) {
-		//??????????????
+	public void addStudent (Student newStudent) {
+		student.add (newStudent);
 	}
 	
 	public String toString () {
